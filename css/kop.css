@@ -1,0 +1,54 @@
+div#wrapper{
+    display:grid;
+    gap:10px;
+    min-height:100vh;
+    min-width:100vh;
+    grid-template-columns: 25vw 25vw 25vw 1fr;
+    grid-template-rows: 15vh 20vh 40vh 260vh 15vh;
+    grid-template-areas: 
+    'nv nv nv nv'
+    'hd hd hd hd'
+    'as1 mn mn as2'
+    '. mn mn .'
+    'ft ft ft ft';
+
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    justify-content:space-evenly;
+    grid-area: nv;
+    background-color:grey;
+}
+
+header{
+    display:flex;
+    grid-area:hd;
+    background-color:aqua;
+}
+
+aside#as1{
+    display:flex;
+    grid-area:as1;
+    background-color:blueviolet;
+}
+
+main{
+    display:flex;
+    grid-area:mn;
+    background-color:yellow;
+}
+
+aside#as2{
+    display:flex;
+    grid:as2;
+    background-color:blanchedalmond;
+}
+
+footer{
+    display:flex;
+    grid-area:ft;
+    background-color:greenyellow;
+}
