@@ -1,0 +1,226 @@
+/*kundens färg: #c0392b, nära kundens färg: #D65548,  knappfärg: #f1c40f,  Bakgrundfärg: #f7f1e3*/
+
+
+
+/*här är allt allmänt som gäller för alla sidor*/
+
+@charset "UTF-8";
+
+@font-face {
+    font-family:montserrat;
+    src: url(../fonts/montserrat.ttf);
+    font-weight:normal;
+    
+}
+
+@font-face {
+    font-family:opensans;
+    src: url(../fonts/opensans.ttf);
+    font-weight:normal;
+}
+
+a{
+    text-decoration:none;
+}
+
+p{
+    font-family:opensans;
+    margin-top:0;
+    margin-bottom:0;
+    font-size:1.1em;
+}
+
+section{
+    padding:5px;
+    border-radius:10px;
+    background-color:#efbdb8;
+    border:3px solid #c0392b;
+}
+article{
+    border-radius:10px;
+    background-color:#efbdb8;
+    border:3px solid #c0392b;
+}
+
+footer{
+    border-radius:10px;
+    background-color:#efbdb8;
+    border:3px solid #c0392b;
+}
+
+aside{
+    border-radius:10px;
+    background-color:#efbdb8;
+    border:3px solid #c0392b;
+}
+
+body{
+    background-color:#f7f1e3;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    justify-content:space-evenly;
+    grid-area: nv;
+    border-radius:10px;
+    background-color:#efbdb8;
+    border:3px solid #c0392b;
+
+    font-family:montserrat;
+}
+
+button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100px;
+    height:50px;
+    font-size:1em;
+    color:black;
+    border-radius:10px;
+    background-color:#f1c40f;
+    border-color:#f5d450;
+    transition-duration:0.4s;
+    border-width:2px;
+    box-shadow: 2px 4px 5px;
+}
+
+button:hover{
+    background-color:whitesmoke;
+}  
+
+header{
+    display:flex;
+    grid-area:hd;
+    justify-content:center;
+    align-items:center;
+    font-size:3em;
+    color:black;
+
+    font-family:montserrat;
+}
+
+/*här är allt specifikt för landingsidan*/
+
+div#indexwrapper{
+    display:grid;
+    gap:10px;
+    margin:0%;
+    min-height:100vh;
+    min-width:100vh;
+    grid-template-columns: 50vw 1fr;
+    grid-template-rows: 15vh 20vh 40vh 1fr;
+    grid-template-areas: 
+    'nv nv'
+    'hd hd'
+    'sc ac'
+    'ft ft';
+
+} 
+
+section#indexsection{ 
+    padding:5px;
+    display:flex;
+    grid-area:sc;
+   
+}
+
+article#indexarticle{
+    display:flex;
+    grid-area:ac;
+  
+}
+
+footer#indexfooter{
+    display:flex;
+    grid-area:ft;
+   
+}
+
+/*här är allt specifikt för kopsidan*/
+
+div#kopwrapper{
+    display:grid;
+    gap:10px;
+    min-height:100vh;
+    min-width:100vh;
+    grid-template-columns: 25vw 25vw 25vw 1fr;
+    grid-template-rows: 15vh 20vh 40vh 260vh 15vh;
+    grid-template-areas: 
+    'nv nv nv nv'
+    'hd hd hd hd'
+    'as1 mn mn as2'
+    '. mn mn .'
+    'ft ft ft ft';
+
+}
+
+img{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+aside#kopas1{
+    display:flex;
+    grid-area:as1;
+}
+
+
+
+main#kopmain{
+    display:flex;
+    grid-area:mn;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-direction:column;
+
+}
+
+aside#kopas2{
+    display:flex;
+    grid:as2;
+}
+
+footer#kopfooter{
+    display:flex;
+    grid-area:ft;
+}
+
+/*här är allt specifikt för saljsidan*/
+
+div#saljwrapper{
+    display:grid;
+    gap:10px;
+    min-height:100vh;
+    min-width:100vh;
+    grid-template-columns: 70vw 1fr;
+    grid-template-rows: 15vh 20vh 40vh 1fr;
+    grid-template-areas: 
+    'nv nv'
+    'hd hd'
+    'mn as'
+    'ft ft';
+
+}
+
+main#saljmain{
+    display:flex;
+    grid-area:mn;
+    border-radius:10px;
+    background-color:#D65548;
+    border:3px solid #c0392b;
+}
+
+aside#saljaside{
+    display:flex;
+    grid-area:as;
+}
+
+footer#saljfooter{
+    display:flex;
+    grid-area:ft;
+}
