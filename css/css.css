@@ -23,11 +23,25 @@ a{
     text-decoration:none;
 }
 
-p{
+h2{
     font-family:opensans;
     margin-top:0;
     margin-bottom:0;
     font-size:1.1em;
+}
+
+h3{
+    font-family:opensans;
+    margin-top:0;
+    margin-bottom:0;
+    font-size:1.1em;
+}
+
+p{
+    font-family:opensans;
+    margin-top:0;
+    margin-bottom:0;
+    font-size:0.9em;
 }
 
 section{
@@ -111,18 +125,25 @@ div#indexwrapper{
     min-height:100vh;
     min-width:100vh;
     grid-template-columns: 50vw 1fr;
-    grid-template-rows: 15vh 20vh 40vh 1fr;
+    grid-template-rows: 15vh 20vh 50vh 1fr;
     grid-template-areas: 
     'nv nv'
     'hd hd'
     'sc ac'
-    'ft ft';
+    'ft ac';
 
 } 
+
+img#indeximg{
+    width:50px;
+    height:50px;
+    object-fit:cover;
+}
 
 section#indexsection{ 
     padding:5px;
     display:flex;
+    flex-direction:column;  
     grid-area:sc;
    
 }
@@ -130,6 +151,7 @@ section#indexsection{
 article#indexarticle{
     display:flex;
     grid-area:ac;
+    flex-direction:column;
   
 }
 
@@ -141,6 +163,12 @@ footer#indexfooter{
 
 /*här är allt specifikt för kopsidan*/
 
+article#koparticle{
+    width:33vh;
+    height:33vh;
+    flex-direction:column;
+}
+
 div#kopwrapper{
     display:grid;
     gap:10px;
@@ -150,39 +178,26 @@ div#kopwrapper{
     grid-template-rows: 15vh 20vh 40vh 260vh 15vh;
     grid-template-areas: 
     'nv nv nv nv'
-    'hd hd hd hd'
-    'as1 mn mn as2'
-    '. mn mn .'
+    'mn mn mn mn'
+    'mn mn mn mn'
+    'mn mn mn mn'
     'ft ft ft ft';
 
 }
 
-img{
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
+img#kopimg{
+    object-fit: contain;
+    width:33vh;
+    height:33vh;
 }
-
-aside#kopas1{
-    display:flex;
-    grid-area:as1;
-}
-
-
 
 main#kopmain{
     display:flex;
     grid-area:mn;
     flex-wrap:wrap;
     justify-content:space-evenly;
-    align-items:center;
-    flex-direction:column;
+    flex-direction:row;
 
-}
-
-aside#kopas2{
-    display:flex;
-    grid:as2;
 }
 
 footer#kopfooter{
