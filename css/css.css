@@ -1,6 +1,5 @@
-/*kundens färg: #c0392b, nära kundens färg: #D65548,  knappfärg: #f1c40f,  Bakgrundfärg: #f7f1e3 låda bakgrundsfärg: #efbdb8*/
-
-
+/*www.core77.com*/ 
+/*choosechicago.com*/
 
 /*här är allt allmänt som gäller för alla sidor*/
 
@@ -52,33 +51,38 @@ p{
 section{
     padding:5px;
     border-radius:10px;
-    background-color: #efbdb8;
-    border:3px solid var(--kundfarg);
+    background-color: var(--boxbakgrundfarg);
+    border:3px solid var(--boxborderfarg);
 }
 article{
     border-radius:10px;
-    background-color:#efbdb8;
-    border:3px solid var(--kundfarg);
+    background-color:var(--boxbakgrundfarg);
+    border:3px solid var(--boxborderfarg);
 }
 
 footer{
     border-radius:10px;
-    background-color:#efbdb8;
-    border:3px solid var(--kundfarg);
+    background-color: var(--boxbakgrundfarg);
+    border:3px solid var(--boxborderfarg);
 }
 
 aside{
     display:flex;
     border-radius:10px;
-    background-color:#efbdb8;
-    border:3px solid var(--kundfarg);
+    background-color:var(--boxbakgrundfarg);
+    border:3px solid var(--boxborderfarg);
     flex-direction:column;
     
 }
 
 body{
-    background-color:#f7f1e3;
+    background-color:var(--bakgrundfarg);
     --kundfarg: #c0392b;
+    --knappbakgrundfarg:#FF8C54;
+    --bakgrundfarg: #f7f1e3;
+    --boxbakgrundfarg: #f5deb3;
+    --boxborderfarg:#f1c40f;
+    --ogknappfarg:#f1c40f;
 }
 
 nav{
@@ -88,8 +92,8 @@ nav{
     justify-content:space-evenly;
     grid-area: nv;
     border-radius:10px;
-    background-color:#efbdb8;
-    border:3px solid var(--kundfarg);
+    background-color:var(--boxbakgrundfarg);
+    border:3px solid var(--boxborderfarg);
 
     font-family:montserrat;
 }
@@ -102,9 +106,9 @@ button{
     height:50px;
     font-size:1em;
     color:black;
+    background-color:var(--knappbakgrundfarg);
+    border-color: var(--kundfarg);
     border-radius:10px;
-    background-color:#f1c40f;
-    border-color:#f5d450;
     transition-duration:0.4s;
     border-width:2px;
     box-shadow: 2px 4px 5px;
@@ -134,14 +138,35 @@ div#indexwrapper{
     min-height:100vh;
     min-width:100vh;
     grid-template-columns: 50vw 1fr;
-    grid-template-rows: 15vh 20vh 50vh 1fr;
+    grid-template-rows: 15vh 20vh 50vh 50vh 1fr;
     grid-template-areas: 
     'nv nv'
     'hd hd'
+    'dv dv'
     'sc ac'
     'ft ac';
 
 } 
+
+img#speciellimg{
+    object-fit:cover;
+    width:25%;
+    height:65.75%;
+}
+
+img.indexmainimg{
+    object-fit:contain;
+    width:25%;
+    height:100%;
+}
+
+div#indexdiv{
+    grid-area:dv;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items:center;
+}
 
 img#pro{
     object-fit:contain;
@@ -224,7 +249,7 @@ article#koparticle{
     justify-content:space-evenly;
     box-shadow: 2px 2px 7px;
     border:none;
-    background-color:wheat;
+    background-color:var(--boxbakgrundfarg);
 }
 
 main#kopmain{
@@ -266,8 +291,8 @@ main#saljmain{
     display:flex;
     grid-area:mn;
     border-radius:10px;
-    background-color:#efbdb8;
-    border:3px solid var(--kundfarg);
+    background-color:var(--boxbakgrundfarg);
+    border:3px solid var(--boxborderfarg);
     justify-content:space-evenly;
     align-items:center;
 }
