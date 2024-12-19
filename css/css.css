@@ -1,6 +1,3 @@
-/*www.core77.com*/ 
-/*choosechicago.com*/
-
 /*här är allt allmänt som gäller för alla sidor*/
 
 @charset "UTF-8";
@@ -25,6 +22,16 @@ a{
 li{
     font-family:opensans;
     font-size:0.95em;
+}
+
+select{
+    width:10%;
+    height:10%;
+}
+
+input{
+    width:10%;
+    height:10%;
 }
 
 h2{
@@ -53,17 +60,24 @@ section{
     border-radius:10px;
     background-color: var(--boxbakgrundfarg);
     border:3px solid var(--boxborderfarg);
+    box-shadow:1px 1px 5px black;
 }
 article{
     border-radius:10px;
     background-color:var(--boxbakgrundfarg);
     border:3px solid var(--boxborderfarg);
+    box-shadow:1px 1px 5px black;
 }
 
 footer{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
     border-radius:10px;
     background-color: var(--boxbakgrundfarg);
     border:3px solid var(--boxborderfarg);
+    box-shadow:1px 1px 5px black;
+    font-size:0.8em;
 }
 
 aside{
@@ -72,17 +86,18 @@ aside{
     background-color:var(--boxbakgrundfarg);
     border:3px solid var(--boxborderfarg);
     flex-direction:column;
+    box-shadow:1px 1px 5px black;
     
 }
 
 body{
     background-color:var(--bakgrundfarg);
     --kundfarg: #c0392b;
-    --knappbakgrundfarg:#FF8C54;
-    --bakgrundfarg: #f7f1e3;
-    --boxbakgrundfarg: #f5deb3;
-    --boxborderfarg:#f1c40f;
-    --ogknappfarg:#f1c40f;
+    --knappbakgrundfarg:lightblue;
+    --knappborderfarg:#6fa4b6;
+    --bakgrundfarg: #c0392b; 
+    --boxbakgrundfarg: #FFFFFF;
+    --boxborderfarg:#de6052;
 }
 
 nav{
@@ -96,6 +111,8 @@ nav{
     border:3px solid var(--boxborderfarg);
 
     font-family:montserrat;
+
+    box-shadow:1px 1px 5px black;
 }
 
 button{
@@ -107,7 +124,7 @@ button{
     font-size:1em;
     color:black;
     background-color:var(--knappbakgrundfarg);
-    border-color: var(--kundfarg);
+    border-color: var(--knappborderfarg);
     border-radius:10px;
     transition-duration:0.4s;
     border-width:2px;
@@ -124,7 +141,10 @@ header{
     justify-content:center;
     align-items:center;
     font-size:3em;
-    color:black;
+    color:white;
+    text-shadow: 5px 0 5px #000, -5px 0 5px #000, 0 5px 5px #000, 0 -5px 5px #000,
+    3px 3px 3px #000, -3px -3px 3px #000, 3px -3px 3px #000, -3px 3px 3px #000;
+
 
     font-family:montserrat;
 }
@@ -158,6 +178,7 @@ img.indexmainimg{
     object-fit:contain;
     width:25%;
     height:100%;
+    
 }
 
 div#indexdiv{
@@ -204,6 +225,7 @@ article#indexarticle{
 footer#indexfooter{
     display:flex;
     grid-area:ft;
+    font-size:0.7em;
    
 }
 
@@ -277,13 +299,13 @@ div#saljwrapper{
     gap:10px;
     min-height:100vh;
     min-width:100vh;
-    grid-template-columns: 15vw 1fr;
-    grid-template-rows: 15vh 20vh 40vh 1fr;
+    grid-template-columns: 15vw 60vw 1fr;
+    grid-template-rows: 15vh 20vh 50vh 1fr;
     grid-template-areas: 
-    'nv nv'
-    'hd hd'
-    'as mn'
-    'ft ft';
+    'nv nv nv'
+    'hd hd hd'
+    'as1 mn as2'
+    'ft ft ft';
 
 }
 
@@ -297,14 +319,10 @@ main#saljmain{
     align-items:center;
 }
 
-select{
-    width:10%;
-    height:10%;
-}
-
-input{
-    width:10%;
-    height:10%;
+img#saljimg{
+    object-fit:contain;
+    width:100%;
+    height:100%;
 }
 
 div#saljdiv{
@@ -318,9 +336,12 @@ div#saljdiv{
     
 }
 
-aside#saljaside{
-    display:flex;
-    grid-area:as;
+aside#saljaside1{
+    grid-area:as1;
+}
+
+aside#saljaside2{
+    grid-area:as2;
 }
 
 footer#saljfooter{
