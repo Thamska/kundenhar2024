@@ -1,6 +1,6 @@
+@charset "UTF-8";
 /*här är allt allmänt som gäller för alla sidor*/
 
-@charset "UTF-8";
 
 @font-face {
     font-family:montserrat;
@@ -58,14 +58,14 @@ p{
 section{
     padding:5px;
     border-radius:10px;
-    background-color: var(--boxbakgrundfarg);
-    border:3px solid var(--boxborderfarg);
+    background-color: var(--boxbakgrundfarg,#FFFFFF);
+    border:3px solid var(--boxborderfarg,#de6052);
     box-shadow:1px 1px 5px black;
 }
 article{
     border-radius:10px;
-    background-color:var(--boxbakgrundfarg);
-    border:3px solid var(--boxborderfarg);
+    background-color:var(--boxbakgrundfarg,#FFFFFF);
+    border:3px solid var(--boxborderfarg,#de6052);
     box-shadow:1px 1px 5px black;
 }
 
@@ -74,8 +74,8 @@ footer{
     justify-content:space-evenly;
     align-items:center;
     border-radius:10px;
-    background-color: var(--boxbakgrundfarg);
-    border:3px solid var(--boxborderfarg);
+    background-color: var(--boxbakgrundfarg,#FFFFFF);
+    border:3px solid var(--boxborderfarg,#de6052);
     box-shadow:1px 1px 5px black;
     font-size:0.8em;
 }
@@ -83,17 +83,17 @@ footer{
 aside{
     display:flex;
     border-radius:10px;
-    background-color:var(--boxbakgrundfarg);
-    border:3px solid var(--boxborderfarg);
+    background-color:var(--boxbakgrundfarg,#FFFFFF);
+    border:3px solid var(--boxborderfarg,#de6052);
     flex-direction:column;
     box-shadow:1px 1px 5px black;
     
 }
 
 body{
-    background-color:var(--bakgrundfarg);
+    background-color:var(--bakgrundfarg,#c0392b);
     --kundfarg: #c0392b;
-    --knappbakgrundfarg:lightblue;
+    --knappbakgrundfarg:#add8e6;
     --knappborderfarg:#6fa4b6;
     --bakgrundfarg: #c0392b; 
     --boxbakgrundfarg: #FFFFFF;
@@ -107,8 +107,8 @@ nav{
     justify-content:space-evenly;
     grid-area: nv;
     border-radius:10px;
-    background-color:var(--boxbakgrundfarg);
-    border:3px solid var(--boxborderfarg);
+    background-color:var(--boxbakgrundfarg,#FFFFFF);
+    border:3px solid var(--boxborderfarg,#de6052);
 
     font-family:montserrat;
 
@@ -123,8 +123,8 @@ button{
     height:50px;
     font-size:1em;
     color:black;
-    background-color:var(--knappbakgrundfarg);
-    border-color: var(--knappborderfarg);
+    background-color:var(--knappbakgrundfarg,#add8e6);
+    border-color: var(--knappborderfarg,#6fa4b6);
     border-radius:10px;
     transition-duration:0.4s;
     border-width:2px;
@@ -195,7 +195,7 @@ img#pro{
     height:100%;
 }
 
-img#indeximg{
+img.indeximg{
     width:50px;
     height:50px;
     object-fit:cover;
@@ -264,14 +264,14 @@ div.kopdiv{
 
 article#koparticle{
     display:flex;
-    width: var(--widthart);
-    height: var(--heightart);
+    width: var(--widthart,20vw);
+    height: var(--heightart,65vh);
     align-items:center;
     flex-direction:column;
     justify-content:space-evenly;
     box-shadow: 2px 2px 7px;
     border:none;
-    background-color:var(--boxbakgrundfarg);
+    background-color:var(--boxbakgrundfarg,#FFFFFF);
 }
 
 main#kopmain{
@@ -313,8 +313,8 @@ main#saljmain{
     display:flex;
     grid-area:mn;
     border-radius:10px;
-    background-color:var(--boxbakgrundfarg);
-    border:3px solid var(--boxborderfarg);
+    background-color:var(--boxbakgrundfarg,#FFFFFF);
+    border:3px solid var(--boxborderfarg,#de6052);
     justify-content:space-evenly;
     align-items:center;
 }
