@@ -339,6 +339,7 @@ div#saljdiv{
 
 aside#saljaside1{
     grid-area:as1;
+    padding:5%;
 }
 
 aside#saljaside2{
