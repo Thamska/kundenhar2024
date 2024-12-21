@@ -15,10 +15,6 @@
     font-weight:normal;
 }
 
-a{
-    text-decoration:none;
-}
-
 li{
     font-family:opensans;
     font-size:0.95em;
@@ -262,7 +258,7 @@ div.kopdiv{
     justify-content:space-evenly;
 }
 
-article#koparticle{
+article.koparticle{
     display:flex;
     width: var(--widthart,20vw);
     height: var(--heightart,65vh);
@@ -310,13 +306,18 @@ div#saljwrapper{
 }
 
 main#saljmain{
-    display:flex;
     grid-area:mn;
     border-radius:10px;
     background-color:var(--boxbakgrundfarg,#FFFFFF);
     border:3px solid var(--boxborderfarg,#de6052);
+}
+
+form#saljform{
+    display:flex;
     justify-content:space-evenly;
     align-items:center;
+    width:100%;
+    height:100%;
 }
 
 img#saljimg{

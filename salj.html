@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +9,12 @@
 <body>
     <div id="saljwrapper">
         <nav id="saljnav">
-            <a href="index.html">
-                <button><p>Huvudsida</p></button>
-            </a>
-            <a href="kop.html">
-                <button><p>Köp</p></button>
-            </a>
+            <form style="display: inline" action="index.html" method="get">
+                <button>Huvudsida</button>
+            </form>
+            <form style="display: inline" action="kop.html" method="get">
+                <button>Köp</button>
+            </form>
         </nav>
         <header id="saljheader">
             <h1>Artistic Allure</h1>
@@ -34,18 +34,20 @@
             </ol>
         </aside> 
         <main id="saljmain">
-            <div id="saljdiv">Dra in bild här</div>
-            <input type="text" placeholder="Ditt pris">
-            <input type="text" placeholder="Namn">
-            <select>
-                <option>Ditt land</option>
-                <option>Sverige</option>
-                <option>Tomtelandet</option>
-                <option>Narnia</option>
-            </select>
+            <form id="saljform">
+                <div id="saljdiv">Dra in bild här</div>
+                <input type="text" placeholder="Ditt pris">
+                <input type="text" placeholder="Namn">
+                <select>
+                    <option>Ditt land</option>
+                    <option>Sverige</option>
+                    <option>Tomtelandet</option>
+                    <option>Narnia</option>
+                </select>
+            </form>
         </main>
         <aside id="saljaside2">
-            <img id=saljimg src="img/9Tp6AEzrc (1).jpg" alt="en bild som säger: tack så mycket">
+            <img id=saljimg src="img/9Tp6AEzrc.jpg" alt="en bild som säger: tack så mycket">
         </aside>
         <footer id="saljfooter">
 
